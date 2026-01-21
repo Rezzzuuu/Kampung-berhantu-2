@@ -1,0 +1,33 @@
+/* =========================================
+   HEADER.CSS - Global Styles & Accessibility
+   ========================================= */
+
+/* --- 1. GLOBAL FILTERS (Buta Warna) --- */
+html.mode-deuteranopia { filter: hue-rotate(180deg) saturate(1.2); }
+html.mode-protanopia { filter: hue-rotate(200deg) saturate(1.2); }
+html.mode-tritanopia { filter: hue-rotate(90deg) saturate(1.5); }
+html.mode-high-contrast { filter: grayscale(100%) contrast(150%); background: #000 !important; }
+html.mode-kids { filter: saturate(2) brightness(1.3); }
+
+/* --- 2. READABLE FONT (Dyslexia) --- */
+html.mode-readable * {
+    font-family: 'Verdana', 'Arial', sans-serif !important;
+    letter-spacing: 0.05em !important;
+    line-height: 1.6 !important;
+    text-transform: none !important;
+}
+
+/* --- 3. TRANSITIONS --- */
+html { transition: filter 0.5s ease; }
+
+/* --- 4. NAVBAR STYLES --- */
+/* Supaya navbar tak keluar bila print */
+@media print {
+    .no-print { display: none !important; }
+}
+
+/* Animasi Ikon Gear */
+#btn-open-settings:hover svg {
+    transform: rotate(90deg);
+    transition: transform 0.5s ease;
+}

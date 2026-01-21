@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>👻 Kampung Berhantu - Watak</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👺</text></svg>">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="watak.css"> 
+</head>
+<body class="h-[100dvh] bg-main text-gray-200 overflow-hidden flex flex-col">
+  
+  <div id="navbar-placeholder" class="shrink-0"></div>
+  <script src="header.js"></script>
+
+  <div class="flex-1 flex flex-col md:flex-row overflow-hidden relative">
+      
+      <div class="absolute inset-0 z-0 flex pointer-events-none">
+        <div class="w-1/2 h-full bg-gradient-to-r from-red-950/20 to-transparent"></div>
+        <div class="w-1/2 h-full bg-gradient-to-l from-emerald-950/20 to-transparent"></div>
+      </div>
+
+      <div class="w-full md:w-1/4 h-48 md:h-full p-2 md:p-4 flex flex-col z-10 md:border-r border-b md:border-b-0 border-white/10 bg-black/20 shrink-0">
+        <div class="text-center mb-1 md:mb-4 bg-black/30 md:bg-transparent py-1 md:py-0 rounded">
+            <h2 class="font-title text-xs md:text-2xl font-bold text-red-500 uppercase tracking-widest">Ancaman</h2>
+        </div>
+        <div id="evil-roster" class="flex-1 overflow-y-auto roster-scroll space-y-1 p-1">
+            </div>
+      </div>
+      
+      <div id="center-container" class="w-[90%] md:w-2/4 flex-1 mx-auto p-1 md:p-6 flex flex-col items-center z-20 bg-black/40 backdrop-blur-sm relative overflow-y-auto roster-scroll custom-scrollbar rounded-xl border border-white/5 my-1 md:my-0">
+        
+         <div id="info-default" class="text-center animate-pulse opacity-50 mt-8 md:mt-20">
+            <div class="text-4xl md:text-7xl mb-2 md:mb-4">🎴</div>
+            <h3 class="font-title text-sm md:text-3xl text-gray-400">Pilih Watak</h3>
+            <p class="text-[10px] text-gray-500 mt-1 md:hidden">(Senarai di atas/bawah)</p>
+         </div>
+
+         <div id="info-active" class="hidden w-full h-full flex flex-col items-center justify-start pt-1 text-center animate-fade-in w-full pb-6">
+            
+            <div id="info-badge" class="inline-block px-3 md:px-8 py-0.5 md:py-2 mb-2 md:mb-6 rounded text-[9px] md:text-xs font-bold uppercase tracking-[0.2em] border shadow-lg backdrop-blur-md transition-all duration-300">TEAM</div>
+
+            <div class="relative w-[85%] md:w-full flex items-center justify-center mb-2 md:mb-6 shrink-0">
+                <button id="btn-stack-prev" class="absolute left-0 md:left-10 z-50 p-2 md:p-3 rounded-full bg-black/50 border border-white/10 hover:bg-emerald-600 transition-all shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+
+                <div id="info-visual-container" class="relative h-[20vh] md:h-[40vh] aspect-[3/4] max-h-[300px] w-auto perspective-container">
+                    </div>
+
+                <button id="btn-stack-next" class="absolute right-0 md:right-10 z-50 p-2 md:p-3 rounded-full bg-black/50 border border-white/10 hover:bg-emerald-600 transition-all shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+
+            <div id="skin-preview-bar" class="flex flex-col items-center gap-1 md:gap-4 mb-2 md:mb-6">
+                <div id="skin-name-label" class="font-title text-[9px] md:text-[12px] uppercase tracking-[0.3em] font-bold text-emerald-400">Default</div>
+                <div id="skin-thumbnails" class="flex gap-2 md:gap-3 overflow-x-auto max-w-full px-4 pb-1"></div>
+            </div>
+
+            <h1 id="info-name" class="font-title text-xl md:text-5xl font-bold text-white mb-2 md:mb-4 uppercase drop-shadow-lg leading-none">Nama</h1>
+            
+            <div class="space-y-2 w-full max-w-lg px-2 md:px-4">
+                <div class="bg-black/80 p-2 md:p-5 rounded-lg border border-white/10 shadow-lg backdrop-blur-md">
+                    <p id="info-desc" class="text-[11px] md:text-lg text-gray-200 italic leading-relaxed">...</p>
+                </div>
+                
+                <div id="info-ability-box" class="bg-white/5 p-2 md:p-4 rounded-lg border border-white/10 shadow-inner text-white text-left">
+                    <h4 class="text-[9px] md:text-xs font-bold uppercase mb-1 md:mb-2 text-white/60 tracking-widest">⚡ Kuasa Khas</h4>
+                    <div id="info-ability" class="text-[11px] md:text-base">...</div>
+                </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="w-full md:w-1/4 h-48 md:h-full p-2 md:p-4 flex flex-col z-10 md:border-l border-t md:border-t-0 border-white/10 bg-black/20 shrink-0">
+        <div class="text-center mb-1 md:mb-4 bg-black/30 md:bg-transparent py-1 md:py-0 rounded">
+            <h2 class="font-title text-xs md:text-2xl font-bold text-emerald-400 uppercase tracking-widest">Harapan</h2>
+        </div>
+        <div id="good-roster" class="flex-1 overflow-y-auto roster-scroll space-y-1 p-1">
+            </div>
+      </div>
+  </div>
+
+  <script src="common.js"></script> 
+  <script src="watak.js"></script>
+</body>
+</html>

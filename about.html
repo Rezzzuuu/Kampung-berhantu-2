@@ -1,0 +1,94 @@
+<!DOCTYPE html> 
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>👻 Kampung Berhantu - Tentang</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ℹ️</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Crimson+Text:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body class="h-full bg-main text-gray-200">
+  <div id="app" class="h-full overflow-auto">
+    
+    <div id="navbar-placeholder"></div>
+    <script src="header.js"></script>
+
+    <div class="max-w-4xl mx-auto px-4 py-10">
+      <div class="surface-main p-8 md:p-12 border-t-4 border-emerald-600 text-center relative overflow-hidden">
+        
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMWgydjJIMUMxeiIgZmlsbD0iIzA2N5AzYiIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=')] opacity-20"></div>
+
+        <div class="relative z-10">
+          <div class="text-6xl mb-4 animate-pulse-glow inline-block">🛖</div>
+          <h2 class="font-title text-4xl font-bold mb-2 text-emerald-100">Kampung Berhantu</h2>
+          <p class="text-lg text-emerald-500 font-bold tracking-widest mb-8">VERSI 1.0.0</p>
+          
+          <div class="text-left max-w-2xl mx-auto space-y-6 text-gray-300 leading-relaxed">
+            <p>
+              <strong class="text-emerald-400">Kampung Berhantu</strong> adalah permainan deduksi sosial interaktif yang diilhamkan oleh permainan klasik "Werewolf" atau "Mafia", tetapi diberi nafas baru dengan elemen mistik dan seram budaya Melayu.
+            </p>
+            <p>
+              Pemain dibahagikan kepada dua kumpulan: <strong class="text-emerald-400">Orang Kampung</strong> yang cuba bertahan hidup, dan <strong class="text-red-400">Hantu</strong> (seperti Pontianak) yang menyamar dan membunuh dalam diam.
+            </p>
+          </div>
+
+          <div class="mt-12 pt-8 border-t border-emerald-900/50">
+            <h3 class="font-title text-xl font-bold text-emerald-400 mb-6">Ahli Pasukan</h3>
+            <div class="flex flex-wrap justify-center gap-6 max-w-2xl mx-auto" id="team-container"></div>
+          </div>
+
+          <div class="mt-8 text-xs text-gray-600">
+            &copy; 2026 Hak Cipta Terpelihara.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div id="dev-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4">
+    <button onclick="closeModal()" class="absolute top-5 right-5 text-gray-400 hover:text-white text-4xl z-50">&times;</button>
+    
+    <div class="flip-card-container w-full max-w-sm h-[500px]">
+      
+      <div class="flip-card-inner h-full w-full relative transition-transform duration-700 shadow-2xl cursor-pointer" id="card-inner" onclick="flipCard()">
+        
+        <div class="flip-card-front absolute w-full h-full surface-main rounded-xl overflow-hidden flex flex-col backface-hidden">
+          <div class="h-[60%] w-full relative">
+              <img id="modal-img" src="" class="w-full h-full object-cover" alt="Character">
+              <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent h-12"></div>
+          </div>
+          <div class="h-[40%] w-full p-4 flex flex-col justify-center bg-black/40 border-t border-emerald-900">
+             <h4 class="text-emerald-400 font-title text-center mb-2 font-bold tracking-widest text-lg">STATS</h4>
+             <div class="space-y-1 text-sm text-gray-300 px-2" id="stats-container"></div>
+          </div>
+        </div>
+
+        <div class="flip-card-back absolute w-full h-full bg-emerald-950 rounded-xl overflow-hidden flex flex-col items-center justify-center backface-hidden border-2 border-emerald-600 shadow-[0_0_30px_rgba(16,185,129,0.3)]" style="transform: rotateY(180deg);">
+          <div class="text-center p-6 space-y-6">
+              <div class="text-6xl animate-pulse">🪪</div>
+              <div>
+                  <p class="text-xs uppercase text-emerald-500 tracking-[0.2em] mb-1">Nama Penuh</p>
+                  <h2 id="modal-name" class="text-3xl font-title text-white font-bold"></h2>
+              </div>
+              <div>
+                  <p class="text-xs uppercase text-emerald-500 tracking-[0.2em] mb-1">Nombor ID</p>
+                  <p id="modal-id" class="text-xl font-mono text-emerald-200 bg-black/30 py-1 px-4 rounded inline-block border border-emerald-800"></p>
+              </div>
+              <div>
+                  <p class="text-xs uppercase text-emerald-500 tracking-[0.2em] mb-1">Jawatan</p>
+                  <p id="modal-class" class="text-xl text-white font-serif italic"></p>
+              </div>
+              <p class="text-[10px] text-emerald-600 uppercase tracking-widest mt-4 opacity-50">(Tap to flip back)</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="common.js"></script>
+  <script src="about.js"></script>
+</body>
+</html>

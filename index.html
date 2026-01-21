@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampung Berhantu - Masuk</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Nosifer&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="entrance.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        title: ['Cinzel', 'serif'],
+                        spooky: ['Nosifer', 'cursive'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="entrance-wrapper" id="entrance-screen">
+        <div class="image-container">
+            <img src="images/entrance.png" alt="Gerbang Kampung Berhantu" id="gate-image">
+            <div class="fade-overlay" id="fade-overlay"></div>
+        </div>
+
+        <div class="intro-content" id="intro-content">
+            <h1 class="spooky-title">Kampung Berhantu</h1>
+            <p class="spooky-subtitle">Awas! Jangan masuk selepas senja...</p>
+            <button class="enter-button" id="enter-btn">MASUK KAMPUNG</button>
+        </div>
+    </div>
+    
+    <script src="entrance.js"></script><script src="header.js"></script>
+</body>
+</html>

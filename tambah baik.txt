@@ -1,0 +1,15 @@
+-BOMOH OP(PATUTNYA BUTANG BAWAH DIA TU IMBAS BUKAN SELESAI TERUS,LEPAS SELESAI KELUAR POPUP RESULT IMBASAN TUH)
+-TAMBAH RESTRICTION BUTTON TIME VOTING(BOLEH UNDI TIME TK PILIH(GET OU-))
+-RESULT DARIPDA SYAK(KIV)
+-Mak andam belom stronk(tak leh nak pair kan orang kampung)
+-ketua kampung belom stronk(vote tak value double)
+-main semula(ada dua option:
+	-reset pemain
+	-kekalkan pemain
+-Pontianak no limit(stronk giler)
+-tambah button reset kat Pontianak(time pilih nk bunuh)
+-tambah option nenek kebayan boleh bagi racun atau penawar bukan syak
+-pendekar tak stronk(tak bunuh Pontianak walaupun dibunuh)
+-nanti tambah mak jah(nak bagi lauk lebih - dtg rumah orang)
+-laporan lepas main tambah baik
+-sejarah(in progress)

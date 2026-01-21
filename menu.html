@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampung Berhantu - Menu Utama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Nosifer&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #050505;
+            background-image: url('images/entrance.png'); /* Optional */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Overlay to darken background */
+        .bg-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(8px);
+            z-index: -1;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        title: ['Cinzel', 'serif'],
+                        spooky: ['Nosifer', 'cursive'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="bg-overlay"></div>
+
+    <div class="menu-container animate-fade-in flex flex-col items-center text-center p-8 border border-emerald-900/30 rounded-2xl bg-black/40 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+        <h1 class="font-title text-4xl md:text-6xl font-bold text-emerald-500 mb-8 tracking-wider drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">Kampung Berhantu</h1>
+        
+        <div class="flex flex-col gap-4 w-full max-w-md">
+            
+            <a href="game.html" class="menu-button group relative overflow-hidden bg-emerald-900/30 hover:bg-emerald-800/50 border border-emerald-700/50 px-8 py-4 rounded-lg text-xl font-bold text-emerald-300 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+                <span class="relative z-10">MULA MAIN</span>
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-600/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+            </a>
+
+            <a href="watak.html" class="menu-button group relative overflow-hidden bg-red-900/30 hover:bg-red-800/50 border border-red-700/50 px-8 py-4 rounded-lg text-xl font-bold text-red-300 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_rgba(220,38,38,0.4)]">
+                <span class="relative z-10">WATAK</span>
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-red-600/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+            </a>
+
+            <a href="tutorial.html" class="menu-button group relative overflow-hidden bg-gray-900/30 hover:bg-gray-800/50 border border-gray-700/50 px-8 py-4 rounded-lg text-xl font-bold text-gray-300 transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                <span class="relative z-10">PANDUAN</span>
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-gray-600/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+            </a>
+
+            <a href="index.html" class="menu-button group relative overflow-hidden bg-slate-900/30 hover:bg-slate-800/50 border border-slate-700/50 px-6 py-2 text-xs font-bold text-slate-400 transition-all duration-300 transform hover:scale-105 mt-6 w-fit mx-auto">
+                <span class="relative z-10 flex items-center justify-center gap-2">
+                    <span>⬅</span> KEMBALI
+                </span>
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-slate-600/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+            </a>
+
+        </div>
+        
+        <p class="text-gray-500 mt-8 text-sm">© 2026 Kampung Berhantu. Berani ke?</p>
+    </div>
+    <script src="header.js"></script>
+</body>
+</html>

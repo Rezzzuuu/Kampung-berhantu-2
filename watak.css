@@ -1,0 +1,134 @@
+/* --- Global & Fonts --- */
+body {
+    background: linear-gradient(180deg, #020617 0%, #064e3b 100%);
+    color: #e5e7eb;
+}
+
+.font-title {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.05em;
+}
+
+/* --- Scrollbar Styling --- */
+.roster-scroll::-webkit-scrollbar {
+    width: 4px;
+}
+.roster-scroll::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+.roster-scroll::-webkit-scrollbar-thumb {
+    background: #059669; /* Emerald-600 */
+    border-radius: 10px;
+}
+.roster-scroll::-webkit-scrollbar-thumb:hover {
+    background: #10b981; /* Emerald-500 */
+}
+
+/* --- Roster Card Interactions --- */
+.char-card {
+    transition: all 0.2s ease;
+}
+.char-card:hover {
+    transform: translateX(5px);
+    background: rgba(0, 0, 0, 0.4);
+}
+/* Removed reverse hover transform for consistency on mobile */
+
+.avatar-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* --- 3D Character Stack System --- */
+#info-visual-container {
+    perspective: 1200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-stack-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Cubic bezier for "liquid/springy" effect */
+    transition: 
+        transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55), 
+        opacity 0.6s ease, 
+        filter 0.6s ease;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.1);
+    background: #111;
+}
+
+.card-stack-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Active Card (Center) */
+.card-active {
+    z-index: 30;
+    transform: translateZ(50px) scale(1);
+    opacity: 1;
+    filter: blur(0) brightness(1.1);
+    border-color: rgba(255,255,255,0.6);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* Previous/Next Cards (Peeking from behind) */
+.card-prev, .card-next {
+    z-index: 20;
+    opacity: 0.4;
+    filter: blur(4px) grayscale(0.5);
+}
+
+.card-prev {
+    transform: translateX(-35%) scale(0.8) rotateY(20deg);
+}
+
+.card-next {
+    transform: translateX(35%) scale(0.8) rotateY(-20deg);
+}
+
+/* Hidden Cards */
+.card-hidden {
+    z-index: 10;
+    transform: scale(0.5) translateZ(-100px);
+    opacity: 0;
+    filter: blur(20px);
+    pointer-events: none;
+}
+
+/* --- Skin Thumbnails --- */
+.skin-thumb {
+    transition: all 0.3s ease;
+    border-width: 2px;
+    border-color: rgba(255,255,255,0.1);
+}
+
+.skin-thumb.active {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    z-index: 10;
+    border-color: white;
+}
+
+/* Team Specific Highlights */
+.skin-thumb-evil.active { border-color: #ef4444; }
+.skin-thumb-good.active { border-color: #10b981; }
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
