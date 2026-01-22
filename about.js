@@ -4,21 +4,21 @@ const teamData = [
         name: "ISMA ZAHIN BIN AMIRUDDIN", 
         id: "2025180017", 
         role: "Team Leader", 
-        image: 'images/Isma.png',
+        image: 'images/isma.png',
         stats: [5, 4, 2, 3, 3] 
     },
     { 
         name: "DANIAL FARHAN BIN MUHAMMAD FAISAL", 
         id: "2025140177", 
         role: "Front-end Developer", 
-        image: 'images/Farhan.png',
+        image: 'images/farhan.png',
         stats: [3, 2, 4, 5, 2] 
     },
     { 
         name: "MUHAMMAD EIDLAN MUQRI BIN MUNIR", 
         id: "2025138129", 
         role: "Tester", 
-        image: 'images/Eidlan.jpeg',
+        image: 'images/eidlan.jpeg',
         stats: [5, 5, 1, 5, 5] 
     },
     { 
@@ -32,7 +32,7 @@ const teamData = [
         name: "Nor Irfan Bin Nor Hisham", 
         id: "2025121363", 
         role: "Front-end Developer", 
-        image: 'images/Irfan.jpeg',
+        image: 'images/irfan.jpeg',
         stats: [4, 5, 2, 3, 4] 
     }
 ];
@@ -109,4 +109,5 @@ window.onclick = function(event) {
     if (event.target === modal) {
         closeModal();
     }
+
 }
