@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
         Bomoh: 'images/bomoh.png',
         Ustaz: 'images/ustaz.png',
         Pendekar: 'images/pendekar.png',
-        cupid: 'images/MakANDAM.png',
+        cupid: 'images/makandam.png',
         witch: 'images/nenek2.png',
-        mayor: 'images/ketuaBiasa.png',
-        hantu_raya: 'images/HantuRaya.png',
-        pelesit: 'images/pelesitNormal.png',
-        bajang: 'images/sakaBiasa.png'
+        mayor: 'images/ketuabiasa.png',
+        hantu_raya: 'images/hanturaya.png',
+        pelesit: 'images/pelesitnormal.png',
+        bajang: 'images/sakabiasa.png'
     };
 
     const ROLE_SKINS = {
@@ -37,50 +37,50 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: "Mythic Color", img: "images/orang_kampung_mytic(color_version).png" }, 
             { name: "Legend", img: "images/orang_kampung_legend.png" }, 
             { name: "Legend Color", img: "images/Soldier.png" },
-            { name: "Collab", img: "images/Pelajar.png" },
-            { name: "Collab Terminator", img: "images/TerminatorPremium.png" },
-            { name: "Collab Terminator(Color)", img: "images/TerminatorBerdiri.png" }
+            { name: "Collab", img: "images/pelajar.png" },
+            { name: "Collab Terminator", img: "images/terminatorpremium.png" },
+            { name: "Collab Terminator(Color)", img: "images/terminatorberdiri.png" }
         ],
         Pontianak: [
             { name: "Asal", img: "images/pontianak1.png" },
             { name: "Common", img: "images/pontianak_biasa.png" }
         ],
         Pendekar: [
-            { name: "Asal", img: "images/Pendekar.png" },
-            { name: "Collector", img: "images/PendekarPremium.png" }
+            { name: "Asal", img: "images/pendekar.png" },
+            { name: "Collector", img: "images/pendekarpremium.png" }
         ],
         pelesit: [
-            { name: "Asal", img: "images/PelesitNormal.png" },
-            { name: "Collector", img: "images/PelesitBotak.png" }
+            { name: "Asal", img: "images/pelesitnormal.png" },
+            { name: "Collector", img: "images/pelesitbotak.png" }
         ],
         mayor: [
-        { name: "Asal", img: "images/KetuaBiasa.png" },
-        { name: "Collector", img: "images/KetuaTua.png" },
-        { name: "Collector", img: "images/KetuaPremium.png" }
+        { name: "Asal", img: "images/ketuabiasa.png" },
+        { name: "Collector", img: "images/ketuatua.png" },
+        { name: "Collector", img: "images/ketuapremium.png" }
         ],
         bajang: [
-        { name: "Asal", img: "images/SakaBiasa.png" },
-        { name: "Collector", img: "images/SakaTua.png" }
+        { name: "Asal", img: "images/sakabiasa.png" },
+        { name: "Collector", img: "images/sakatua.png" }
         ],
         Bomoh: [
-        { name: "Asal", img: "images/Bomoh.png" }
+        { name: "Asal", img: "images/bomoh.png" }
         ],
         witch: [
-        { name: "Asal", img: "images/Nenek2.png" },
-        { name: "Epik", img: "images/Nenek1.png" }
+        { name: "Asal", img: "images/nenek2.png" },
+        { name: "Epik", img: "images/nenek1.png" }
         ],
         cupid: [
-        { name: "Asal", img: "images/MakANDAM.png" },
-        { name: "Warna", img: "images/MakAndam2.png" }
+        { name: "Asal", img: "images/makandam.png" },
+        { name: "Warna", img: "images/makandam2.png" }
         ],
         
         hantu_raya: [
-        { name: "Asal", img: "images/HantuRaya.png" },
-        { name: "Elit", img: "images/HantuRaya2.png"},
+        { name: "Asal", img: "images/hanturaya.png" },
+        { name: "Elit", img: "images/hanturaya2.png"},
         ],
         Ustaz: [
-            { name: "Asal", img: "images/Ustaz.png"},
-            { name: "Elit", img: "images/Ustaz1.png"}
+            { name: "Asal", img: "images/ustaz.png"},
+            { name: "Elit", img: "images/ustaz1.png"}
         ]
     };
 
