@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: "Mythic", img: "images/orang_kampung_mytic.png" },
             { name: "Mythic Color", img: "images/orang_kampung_mytic(color_version).png" }, 
             { name: "Legend", img: "images/orang_kampung_legend.png" }, 
-            { name: "Legend Color", img: "images/Soldier.png" },
+            { name: "Legend Color", img: "images/soldier.png" },
             { name: "Collab", img: "images/pelajar.png" },
             { name: "Collab Terminator", img: "images/terminatorpremium.png" },
             { name: "Collab Terminator(Color)", img: "images/terminatorberdiri.png" }
