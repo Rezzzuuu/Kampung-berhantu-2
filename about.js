@@ -5,28 +5,28 @@ const teamData = [
         id: "2025180017", 
         role: "Team Leader", 
         image: 'images/isma.png',
-        stats: [5, 4, 2, 3, 3] 
+        stats: [5, 4, 3, 3, 3] 
     },
     { 
         name: "DANIAL FARHAN BIN MUHAMMAD FAISAL", 
         id: "2025140177", 
         role: "Front-end Developer", 
         image: 'images/farhan.png',
-        stats: [3, 2, 4, 5, 2] 
+        stats: [3, 2, 4, 5, 5] 
     },
     { 
         name: "MUHAMMAD EIDLAN MUQRI BIN MUNIR", 
         id: "2025138129", 
         role: "Tester", 
         image: 'images/eidlan.jpeg',
-        stats: [5, 5, 1, 5, 5] 
+        stats: [5, 3, 1, 2, 2] 
     },
     { 
         name: "MOHAMMAD AMARULHARIZ BIN MOHD FAIRUZ", 
         id: "2025301079", 
-        role: "Tester", 
+        role: "UI/UX Designer", 
         image: 'images/amarul.png',
-        stats: [2, 3, 5, 4, 5] 
+        stats: [1, 1, 5, 1, 5] 
     },
     { 
         name: "Nor Irfan Bin Nor Hisham", 
@@ -37,7 +37,7 @@ const teamData = [
     }
 ];
 
-const statLabels = ["Skill", "Mentality", "Physicality", "Resilience", "Endurance"];
+const statLabels = ["Skil", "Mentaliti", "Fizikal", "Kecekalan", "Ketahanan"];
 
 // --- INITIALIZATION ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -111,3 +111,4 @@ window.onclick = function(event) {
     }
 
 }
+
